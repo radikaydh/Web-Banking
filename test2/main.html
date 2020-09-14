@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+
+<head>
+  <title>E-BANKING</title>
+
+  <link
+    href="https://fonts.googleapis.com/css?family=Raleway&display=swap"
+    rel="stylesheet"
+  />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link type="text/css" rel="stylesheet" href="./stylesheet.css" />
+</head>
+
+<body>
+  <div id="display">
+    <h1>E-BANKING</h1>
+
+    <div class="currentInfo">
+      <div class="current">
+        Current balance
+        <div class="currentAmount" id="currentBalance">
+          Rp 0
+        </div>
+      </div>
+      <div class="current">
+        Overdraft
+        <div class="currentAmount" id="currentOverdraft">
+          Rp 0
+        </div>
+      </div>
+      <div class="current">
+        Overdraft Limit
+        <div class="currentAmount" id="overdraftLimit">
+          Rp 500
+        </div>
+      </div>
+    </div>
+
+    <div class="messageInfo">
+      <p id="message">
+      </p>
+    </div>
+
+    <div id="changeInfo">
+      <div id="deposit" class="change">
+        <form id="formDeposit">
+          <span class="leftColumn">
+            Rp
+            <input
+              type="number"
+              class="input"
+              id="depositAmt"
+              name="deposit"
+              step="0.01"
+            />
+          </span>
+          <span class="rightColumn">
+            <input type="submit" class="bigButton" value="Deposit" />
+          </span>
+        </form>
+      </div>
+      <div id="withdraw" class="change">
+        <form id="formWithdraw">
+          <span class="leftColumn">
+            Rp 
+            <input
+              type="number"
+              class="input"
+              id="withdrawAmt"
+              name="withdraw"
+              step="0.01"
+            />
+          </span>
+          <span class="rightColumn">
+            <input type="submit" class="bigButton" value="Withdraw" />
+          </span>
+        </form>
+      </div>
+
+      <div id="changeOverdraftLimit" class="change">
+        <form>
+          <span class="leftColumn">
+            Change Overdraft Limit:
+          </span>
+          <span class="rightColumn">
+            <button type="button" class="smallButton" id="decrease">-</button>
+            <button type="button" class="smallButton" id="increase">+</button>
+          </span>
+        </form>
+      </div>
+    </div>
+    <script src="script.js" defer></script>
+  </div>
+</body>
